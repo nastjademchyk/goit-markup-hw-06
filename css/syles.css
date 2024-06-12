@@ -141,6 +141,7 @@ section {
   text-decoration: none;
   padding: 24px 0 24px;
   position: relative;
+  display: block;
 }
 
 .link-menu::after {
@@ -309,12 +310,19 @@ text-decoration: none;
 
 .list-team-modal {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 24px;
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   /* padding-left: 16px;
   padding-right: 24px; */
-  align-self: flex-end;
+  align-self: center;
+}
+
+.ad-social{
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  justify-content: space-between;
 }
 
 /* -------------------------Hero Solutions-------------------*/
@@ -338,8 +346,8 @@ text-decoration: none;
 
 .solutions {
   background-color: #2e2f42;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 72px;
+  padding-bottom: 72px;
   background-repeat: no-repeat;
   max-width: 1440px;
   background-position: center;
@@ -1131,6 +1139,7 @@ input[type="checkbox"]:checked + label .span-privacy {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    row-gap: 72px; 
   }
 
   .features-container-list {
@@ -1163,11 +1172,6 @@ input[type="checkbox"]:checked + label .span-privacy {
     width: calc((100% - 24px) / 2);
 } */
 
-  .page-header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
   .page-nav {
     display: flex;
     gap: 40px;
@@ -1187,6 +1191,11 @@ input[type="checkbox"]:checked + label .span-privacy {
 .page-title{
   font-size: 56px;
 }
+.page-address{
+  font-size: 12px;
+  line-height: 1.17; 
+} 
+
 .button-order{
   margin-top: 36px;
 }
@@ -1198,18 +1207,20 @@ input[type="checkbox"]:checked + label .span-privacy {
   width: 360px;
 }
 .footer-container{
+  width: 584px;
   text-indent: 0;
   display: flex;
   align-items: baseline;
   text-align: left;
   justify-content: flex-start;
-  margin-right: 0;
   align-content: center;
-  
-
 }
 .logo-footer-text{
   margin-right: 24px; 
+}
+
+.footer-social{
+  text-align: left;
 }
 
 .subscribe-text{
@@ -1218,6 +1229,10 @@ input[type="checkbox"]:checked + label .span-privacy {
 .footer-description{
  max-width: 264px;
 }
+.solutions{
+  padding-top: 112px;
+  padding-bottom: 32px;
+}
 }
 
 /*----------------------Media---Desktop---------------------*/
@@ -1225,6 +1240,13 @@ input[type="checkbox"]:checked + label .span-privacy {
 @media only screen and (min-width: 1158px) {
   .container {
     width: 1158px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .solutions{
+    padding-top:188px;
+    padding-bottom: 48px;
   }
 
   .icon-box {
@@ -1308,7 +1330,7 @@ input[type="checkbox"]:checked + label .span-privacy {
     align-items: baseline;
     text-align: left;
     margin-right: 0;
-    margin-left: 156px;
+   
   }
   
   .logo-footer-text{
@@ -1316,8 +1338,8 @@ margin-right: 120px;
 margin-bottom: 0;
   }
   .footer-social-media {
-    padding-right: 80px;
-    margin-bottom: 0;
+
+    margin-right: 80px;
   }
 
   .footer-social{
@@ -1337,4 +1359,7 @@ margin-bottom: 0;
   .button-order{
     margin-top: 48px;
   }
+
+
 }
+
