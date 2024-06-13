@@ -296,6 +296,7 @@ background: white;
   display: flex;
   flex-direction: column;
   gap: 40px;
+  flex-grow: 1;
 }
 
 .link-menu-modal{
@@ -312,9 +313,6 @@ text-decoration: none;
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  /* flex-shrink: 0; */
-  /* padding-left: 16px;
-  padding-right: 24px; */
   align-self: center;
 }
 
@@ -325,24 +323,47 @@ text-decoration: none;
   justify-content: space-between;
 }
 
+.address-class-menu{
+  font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color: #434455;
+font-family: "Roboto", sans-serif;
+text-decoration: none;
+}
+.address-class-menu-tel{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color: #4d5ae5;
+text-decoration: none;
+}
+
+.first-menu-item-modal{
+  font-weight: 700;
+font-size: 36px;
+line-height: 1.11111;
+letter-spacing: 0.02em;
+color: #404bbf;
+text-decoration: none;
+}
+
+.link-menu-modal-text{
+  font-weight: 700;
+font-size: 36px;
+line-height: 1.11111;
+letter-spacing: 0.02em;
+color: #2e2f42;
+text-decoration: none;
+}
+.li-modal:not(:last-child) {
+  padding-bottom: 24px;
+}
+
 /* -------------------------Hero Solutions-------------------*/
-/* 
-.solutions {
-  background-color: #2e2f42;
-  padding-top: 188px;
-  padding-bottom: 188px;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/people-office.jpg);
-  max-width: 1440px;
-  background-position: center;
-  background-size: cover;
-  margin: auto;
-} */
 
 .solutions {
   background-color: #2e2f42;
@@ -361,7 +382,10 @@ text-decoration: none;
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
-    ), url('../images/background-mob.jpg');
+    ), image-set(
+      url('../images/background-mob.jpg') 1x,
+      url('../images/background-mob@2x.jpg') 2x
+    );
   }
 }
 
@@ -371,7 +395,10 @@ text-decoration: none;
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
-    ), url('../images/background-tab.jpg');
+    ), image-set(
+      url("../images/background-tab.jpg") 1x, 
+      url("../images/background-tab@2x.jpg") 2x
+    );
   }
 }
 
@@ -381,7 +408,10 @@ text-decoration: none;
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
-    ), url('../images/background-pc.jpg');
+    ), image-set(
+      url("../images/background-pc.jpg") 1x, 
+      url("../images/background-pc@2x.jpg") 2x
+    );
   }
 }
 
